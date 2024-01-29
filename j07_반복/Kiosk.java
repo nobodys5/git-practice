@@ -60,16 +60,19 @@ public class Kiosk {
 					break;
 				} else if(select == 1 && people > 2) {
 					System.out.println("인원이 초과하였습니다.");
+					continue;
 				} else if(select == 1 && people < 4) {
 					System.out.println("포토그레이가 선택되었습니다.");
 					break;
 				} else if(select == 1 && people > 3) {
 					System.out.println("인원이 초과 하였습니다.");
+					continue;
 				} else if(select == 1 && people < 5) {
 					System.out.println("항공필름이 선택되었습니다.");
 					break;
 				}else if(select == 1 && people > 4) {
 					System.out.println("인원이 초과하였습니다.");
+					continue;
 				}
 			}
 			
@@ -79,17 +82,21 @@ public class Kiosk {
 				Thread.sleep(2000);
 				i++;
 			}
-			
-			System.out.println("원하는 사진 수를 입력하시오(짝수만 입력가능):");
-			photoCount = scanner.nextInt();
-			
-			if(photoCount % 2 == 1) {
-				System.out.println("올바르지 않은 입력입니다.");
-			}else {
-				int j = 0;
-				while(j < photoCount) {
-					System.out.println("사진" + (j + 1)+ "이 출력되었습니다.");
-					j++;
+			while(true) {
+				
+				System.out.println("원하는 사진 수를 입력하시오(짝수만 입력가능):");
+				photoCount = scanner.nextInt();
+				
+				if(photoCount % 2 == 1) {
+					System.out.println("올바르지 않은 입력입니다.");
+					continue;
+				}else {
+					int j = 0;
+					while(j < photoCount) {
+						System.out.println("사진" + (j + 1)+ "이 출력되었습니다.");
+						j++;
+					}
+					break; // while문 중괄호 바깥쪽에 break를 입력하면 while문 중괄호까지의 코드들만 입력되고 빠져나감
 				}
 			}
 			
