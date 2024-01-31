@@ -14,6 +14,7 @@ public class ComputerMain {
 		Computer c2 = new Computer();
 		System.out.println(c1);
 		
+		//값주입 방법 1
 		c1.cpu = "i7";
 		c1.year = 2023;
 		c1.company = "SAMSUNG";
