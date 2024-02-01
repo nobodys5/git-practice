@@ -44,19 +44,27 @@ public class Practice7 {
 			break;
 		}
 		
-		System.out.println("빵굽기를 선택하세요");
+		System.out.println("빵을 구워드릴까요?");
 		int tosting = 0;
 		tosting = scanner.nextInt();
 		String result;
 		
-		result = tosting == 0 ? "O" :"X";
-				 
-					 
+		result = tosting > 0 ? "O" :"X";
 				System.out.println(result);
 				
-						
+				
+			System.out.println("야채를 선택해주세요");
+		int fresh = 0;
+		fresh = scanner.nextInt();
+		String result2;
+		result2 = fresh == 1 ? "양상추를 넣어주세요" 
+				: fresh == 2 ? "양파를 넣어주세요" 
+				: fresh == 3 ? "피클을 넣어주세요"
+				: "야채를 빼주세요";		
+				
+			System.out.println(result2);
 		
-		
+			System.out.println();
 		
 		
 		/*
