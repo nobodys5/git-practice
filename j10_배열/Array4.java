@@ -4,8 +4,23 @@ import java.util.Arrays;
 
 public class Array4 {
 	private static void printArray(int[] arr) {
+		System.out.print("Arrays : [");
+		for(int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i]);
+			if(i != arr.length - 1) {
+				System.out.print(", ");
+			}
+		}
+		System.out.print("]");
+	}
 		
 		
+	
+		
+		
+	
+	public static void main(String[] args) {
+
 		//배열만들기
 		// 얕은 복사 - 주소가 같다
 		int[] numbers1 = {1,2,3,2,3,2,2,4,5,9};
@@ -39,20 +54,15 @@ public class Array4 {
 		int[] numbers5 = Arrays.copyOfRange(numbers1, 1, 3);
 		printArray(numbers5);
 		
-
-		System.out.println("Arrays : [");
-		for(int i = 0; i < arr.length; i++) {
-			System.out.println(arr[i]);
-			if(i != arr.length - 1) {
-				System.out.println(", ");
-			}
-		}
-		System.out.println("]");
+		Arrays.fill(numbers5, 10);
+		printArray(numbers5);
+		
+		
+		int index = Arrays.binarySearch(numbers1, 5);
+		System.out.println("찾은 인덱스:" + index);
 		
 		
 		
-	}
-	
 		/*
 		 * Arrays 클래스 사용법
 		 * - 배열을 관리해주는 객체
@@ -72,9 +82,6 @@ public class Array4 {
 		 *  5)배열을 정렬하는 방법
 		 *  - sort(정렬하고자 하는 배열)
 		 */
-	
-	public static void main(String[] args) {
-
 		
 		int[] numbers = {4,3,2,1};
 		
