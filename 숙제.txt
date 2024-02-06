@@ -1,0 +1,20 @@
+OTT
+: 넷플릭스,티빙,왓챠
+
+OTT - 로그인하기
+drama
+movie
+animation
+
+OTTMiddleware
+
+Netflix 
+sale - 20프로 세일합니다.
+
+Tving
+bundle - 1 + 1 입니다.
+
+Watcha
+freetier - 2주 무료 시청입니다.
+*인터페이스 배열만들어서 넷플릭스, 티빙,왓챠
+ 카테고리별로 시청되도록
