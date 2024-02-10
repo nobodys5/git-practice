@@ -1,129 +1,101 @@
 package practice;
 
-
-
 import java.util.Scanner;
 
-public class Practice {
+public class Practice2 {
 
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		
-		
-		System.out.println("추첨을 통해서 10%할인 이벤트중입니다.");
+	public static void main(String[] args) throws InterruptedException  {
+
+		/*
+		 * <인생네컷>
+		 * 
+		 * 1. 하루필름 (2인)
+		 * 2. 포토그레이 (3인)
+		 * 3. 항공필름 (4인)
+		 * 원하는 인생네컷을 고르시오 : 1
+		 * 인원수를 입력하시오 : 2 (3)
+		 * 
+		 * 하루필름을 선택하셨습니다.
+		 * (인원을 초과하였습니다.)
+		 * 
+		 * 찰칵!
+		 * (2초 대기)
+		 * 찰칵!
+		 * (2초 대기)
+		 * 찰칵!
+		 * (2초 대기)
+		 * 찰칵!
+		 * 
+		 * 원하는 사진 수를 입력하시오(짝수만 입력가능): 4
+		 * 
+		 * 사진1 나왔습니다.
+		 * 사진2 나왔습니다.
+		 * 사진3 나왔습니다.
+		 * 사진4 나왔습니다.
+		 * 
+		 * (올바르지 않은 입력입니다.)
+		 * 
+		 */
+		Scanner sc = new Scanner(System.in);
+		System.out.println("하루필름(2인)");
+		System.out.println("포토그레이(3인)");
+		System.out.println("항공필름(4인)");
 		System.out.println();
 		
-		
-		int count = 0;
-		count = scanner.nextInt();
 		while(true) {
-			int rNum = (int)(Math.random() * 100);
-				System.out.println("번호" + rNum);
-				count++;
+			int photo = 0;
+			System.out.println("원하는 인생네컷을 고르시오");
+			photo = sc.nextInt();
 			
-			if(count == 10) break;
-		
-				
-		
-		}
-		System.out.println("당첨되신 분들 축하드립니다.");
-		System.out.println();
-		
-		while(true) {
-			System.out.println("빵종류를 선택하세요");
-			int bread = 0;
-			bread = scanner.nextInt();
-			
-			if(bread == 1) {
-				System.out.println("플랫화이트");
-			} else if(bread == 2) {
-				System.out.println("허니");
-			} else if(bread == 3) {
-				System.out.println("오트");
-				
+			if (photo == 1) {
+				System.out.println("하루필름");
+			} else if (photo == 2) {
+				System.out.println("포토그레이");
 			} else {
-				System.out.println("파마산오레가노");
-				
+				System.out.println("항공필름");
 			}
 			
-			
-			System.out.println("치즈를 선택하세요");
-			int cheeze = 0;
-			cheeze = scanner.nextInt();
-			switch(cheeze) {
-			case 1:
-				System.out.println("모짜렐라");
-				break;
-			case 2:
-				System.out.println("아메리칸 슈레드");
-				break;
-				
-			}
-			
-			System.out.println("빵을 구워드릴까요?");
-			int tosting = 0;
-			tosting = scanner.nextInt();
-			String result;
-			
-			result = tosting > 0 ? "O" :"X";
-			System.out.println(result);
-			
-			
-			
-			
-			System.out.println("야채를 선택해주세요");
-			int fresh = 0;
-			fresh = scanner.nextInt();
-			String result2;
-			result2 = fresh == 1 ? "양상추" 
-					: fresh == 2 ? "양파" 
-							: fresh == 3 ? "피클"
-									: "야채를 빼주세요";		
-			
-			System.out.println(result2);
+			int people = 0;
 			System.out.println();
+			System.out.println("인원수를 입력하시오");
+			people = sc.nextInt();
 			
-			System.out.println("세트메뉴와 단품 메뉴중에 선택해주세요");
-			int setMenu = 0;
-			setMenu = scanner.nextInt();
-			
-				
-				switch(setMenu) {
-				case 1:
-					System.out.println("불고기샌드위치 세트");
-					System.out.println("9500원입니다.");
-					break;
-				case 2:
-					System.out.println("새우샌드위치 세트");
-					System.out.println("9000원입니다.");
-					break;
-				case 3:
-					System.out.println("치킨샌드위치 세트");
-					System.out.println("8500원입니다.");
-					break;
-				case 4:
-					System.out.println("불고기샌드위치");
-					System.out.println("3500원입니다.");
-					break;
-				case 5:
-					System.out.println("새우샌드위치");
-					System.out.println("4500원입니다.");
-					break;
-				case 6:
-					System.out.println("치킨샌드위치");
-					System.out.println("4000원입니다.");
-					
-					
-				}
-				System.out.println("주문이 완료되었습니다.");
-				System.out.println();
+			if(people == 1) {
+				System.out.println("1명");
+			} else if(people == 2) {
+				System.out.println("2명");
+			} else if(people == 3) {
+				System.out.println("3명");
+			} else {
+				System.out.println("인원을 초과하였습니다.");
 			}
-	
 			
-			
-			
-			
+			System.out.println("사진을 찍습니다.");
+			int picture = 4;
+			for(int i = 0; i < picture; i++) {
+				System.out.println("찰칵");
+				Thread.sleep(1000);
+			}
+			System.out.println();
+			System.out.println("원하는 사진수를 입력하시오(짝수)");
+			int photonum = 0; // 입력받을 변수 선언
+			photonum = sc.nextInt(); // 입력받아야하는 변수를 스캐너로 입력받을 준비
+			int num = 0; // while문 반복을 위한 조건 변수 선언
+			// num이 photonum만큼 더해져야 하기때문에 아래와같이 조건을 작성
+			// photonum이 입력을받은 정수에 숫자만큼 결과값이 실행되기때문임
+			while(num < photonum) { 
+				// num 의값이 0이기때문에 4를 입력받으면 num + 1이 결과값인
+				// num 1, 2, 3, 4 까지 출력됨
+				System.out.println("사진" + (num + 1) + "나왔습니다.");
+				System.out.println();
+				num++; // 후처리문 작성 입력숫자만큼 실행되야 하기때문에 num이 더해져야됨
+				
+			}
+			System.out.println("올바르지 않은 선택입니다.\n");
 			
 		}
 		
+			
+	}
+	
 }
