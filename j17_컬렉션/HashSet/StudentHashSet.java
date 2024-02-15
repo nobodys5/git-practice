@@ -35,25 +35,28 @@ public class StudentHashSet {
 		
 		select = sc.nextInt();
 		
-		if(select == 1) {
-			for(Student student : StudentSet) {
-				System.out.println("학번:" + student.getStudentCode());
-			}
-		} else if(select == 2) {
-			System.out.println("삭제할 학생의 이름을 입력하시오:");
-			sc.nextLine();
-			name = sc.nextLine();
+		while(true) {
 			
-			for(Student student : StudentSet) {
-				if(student.getName().equals(name)) {
-					System.out.println("학번 입력하시오:");
-					code = sc.nextInt();
-					
-					if(student.getStudentCode() == code) {
-						StudentSet.remove(student);
-					}else {
-						System.out.println("학번이 올바르지 않습니다.");
-					}
+			if(select == 1) {
+				for(Student student : StudentSet) {
+					System.out.println("학번:" + student.getStudentCode() + "이름:" + student.getName());
+				}
+			} else if(select == 2) {
+				System.out.println("삭제할 학생의 이름을 입력하시오:");
+				sc.nextLine();
+				name = sc.nextLine();
+				
+				for(Student student : StudentSet) {
+					if(student.getName().equals(name)) {
+						System.out.println("학번 입력하시오:");
+						code = sc.nextInt();
+						
+						if(student.getStudentCode() == code) {
+							StudentSet.remove(student);
+						}else {
+							System.out.println("학번이 올바르지 않습니다.");
+						}
+		}
 				
 				}
 			}

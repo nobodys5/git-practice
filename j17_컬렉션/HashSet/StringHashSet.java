@@ -9,12 +9,14 @@ public class StringHashSet {
 
 		HashSet<String> set = new HashSet<String>();
 		
+		//중복 안됨
 		set.add("java");
 		set.add("java");
 		set.add("java");
 		set.add("java");
 		set.add("java");
 
+		//순서대로 요소입력안된다.
 		set.add("python");
 		set.add("2");
 		set.add("1");
@@ -47,6 +49,7 @@ public class StringHashSet {
 	 */
 	System.out.println();
 	while(ir.hasNext()) {
+		// next를 한번 호출했기때문에 String 변수를 초기화 하여 next를 다시담는다.
 		String str = ir.next();
 		if(str.equals("2")) {
 			

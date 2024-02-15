@@ -41,7 +41,7 @@ public class StudentArrayList {
 		
 		// 4. for each 반복문을 통해 반복문 실행
 		for(Student student : studentList) {
-			System.out.println("학번:" + student.getStudentCode());
+			System.out.println("학번:" + student.getStudentCode() + "이름:" + student.getName());
 		}
 		
 		
@@ -53,7 +53,7 @@ public class StudentArrayList {
 		
 		for(Student student : studentList) {
 			if(student.getName().equals("홍길북")) {
-				System.out.println("학번:" + student.getStudentCode());
+				System.out.println("학번:" + student.getStudentCode() + "이름:" + student.getName());
 				studentList.remove(student);
 				
 			}
