@@ -50,17 +50,39 @@ public class UserArrayList {
 
 		for(User user : userList) {
 			System.out.println("아이디 \t\t >" + user.getSignName());
-			System.out.println("아이디 \t >" + user.getPassword());
-			System.out.println("아이디 \t\t >" + user.getName());
-			System.out.println("아이디 \t\t >" + user.getEmail());
+			System.out.println("비밀번호 \t >" + user.getPassword());
+			System.out.println("이름 \t\t >" + user.getName());
+			System.out.println("이메일 \t\t >" + user.getEmail());
 		}
 	}
 	
 	private void printUserremove() {
 		
+		String username = null;
+		String password = null;
 		
+		System.out.println("아이디를 입력하시오");
+		username = scanner.nextLine();
+			
+		for(User user : userList) {
+			
+			if(user.getSignName().equals(username)) {
+				System.out.println("비밀번호를 입력하시오:");
+				password = scanner.nextLine();
+				if(user.getPassword().equals(password)) {
+					userList.remove(user);
+					System.out.println("삭제완료");
+				}else {
+					System.out.println("비밀번호가 올바르지않습니다.");
+				}
+				return;
+			}else {
+				System.out.println("존재하지 않는 아이디입니다.");
+			}
+		}
+		}
 	
-	}
+	
 		
 		
 		/*
@@ -88,6 +110,22 @@ public class UserArrayList {
 		 * 비밀번호 > 1234
 		 * 이름		> 홍길동2
 		 * 이메일	> gildong2@gmail.com
+		 * 
+		 * 
+		 * [사용자 관리 프로그램]
+		 * 1. 사용자 추가
+		 * 2. 사용자 리스트 출력
+		 * 3. 사용자 삭제
+		 * q. 프로그램 종료
+		 * 메뉴선택 > 3
+		 * 
+		 * 아이디를 입력하시오: gildong
+		 * 비밀번호를 입력하시오 : 12345
+		 * 비밀번호가 올바르지 않습니다.
+		 * 
+		 * 아이디를 입력하시오: gildong2
+		 * 존재하지 않는 아이디입니다.
+		 * 
 		 */
 		public static void main(String[] args) {
 			UserArrayList userArrayList = new UserArrayList();
@@ -107,6 +145,8 @@ public class UserArrayList {
 					userArrayList.addUser();
 				} else if(select.equals("2")) {
 					userArrayList.printUserList();
+				} else if(select.equals("3")) {
+					userArrayList.printUserremove();
 				}
 			}
 		}
