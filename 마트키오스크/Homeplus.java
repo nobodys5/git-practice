@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Homeplus {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		HashMap<String, String> order = new HashMap<String, String>();
+		Map<String, String> order = new HashMap<String, String>();
 		List<HashMap<String, String>> a = new ArrayList<HashMap<String, String>>();
 		String select = null;
 		
@@ -22,9 +22,9 @@ public class Homeplus {
 		while(true) {
 			
 			System.out.println("계산해드리겠습니다.");
-			System.out.println("1.주문상품");
+			System.out.println("1.상품검색");
 			System.out.println("2.주문추가");
-			System.out.println("3.상품삭제");
+			System.out.println("3.주문상품삭제");
 			System.out.println("4.주문목록조회");
 			System.out.println("입력");
 			select = scanner.nextLine();

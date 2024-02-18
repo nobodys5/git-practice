@@ -27,8 +27,8 @@ public class HomePluseMain {
 		System.out.println(buy);
 		
 		Homeplus homeplus = new Homeplus();
-		Casher casher = new Casher();
-		BeefConer beefConer = new BeefConer();
+		Event casher = new Event();
+		Calculator beefConer = new Calculator();
 		Ingredient ingredient = new Ingredient();
 		
 		int total = 0;
@@ -41,14 +41,14 @@ public class HomePluseMain {
 					System.out.println("1.상품을 입력합니다.");
 					System.out.println("삐빅");
 					select = scanner.nextLine();
+					ingredient.beansprouts();
 					Thread.sleep(1000);
-					beefConer.cowbeef();
 					select = scanner.nextLine();
+					ingredient.chili();
 					Thread.sleep(1000);
-					beefConer.seosoningpigbeef();
 					select = scanner.nextLine();
+					ingredient.mushroom();
 					Thread.sleep(1000);
-					beefConer.pigbeef();
 					
 		}
 	}
