@@ -14,7 +14,7 @@ public class UserService {
 		list.addAll(Arrays.asList(new String[] {"축구", "농구", "야구", "골프", "탁구"}));
 		
 		User user = User.builder()
-				.username("gildong")
+				.username(null)
 				.userCode(0)
 				.password("1234")
 				.name("길동")
