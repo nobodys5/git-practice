@@ -3,6 +3,7 @@ package com.springboot.web2youngpil20240220.web.controller.api.board;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -49,14 +50,14 @@ public class BoardController {
 	
 	
 	@PostMapping("/content")
-	public ResponseEntity<?> addBoardNow(CreateBoardReqDto createBoardReqDto) {
-		
+	public ResponseEntity<?> addBoardNow(@RequestBody CreateBoardReqDto createBoardReqDto) {
+		//json으로 받을때는 @RequestBody 붙여줘야함
 		boolean responseData = false;
 		
 		try {
-			responseData = boardService.creatuBoard(createBoardReqDto);
+			responseData = boardService.createBoard(createBoardReqDto);
 		} catch (Exception e) {
-			e.printStackTrace();
+			return ResponseEntity.internalServerError().body(responseData);
 		}
 		
 		return ResponseEntity.ok().body(responseData);
