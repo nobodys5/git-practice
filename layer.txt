@@ -1,0 +1,68 @@
+get요청(R)
+:화면을 보여줌
+
+post요청(C)
+:데이터를 보내고 받기
+
+값 받기
+-파람을 통해 값 받기
+?키 = 벨류&
+(@RequestParam("키명칭") 자료형 변수명)@어노테이션이랑 키값 생략가능
+
+-body -form
+키-벨류
+
+String name, int code
+
+@data
+객체 - CreateBoardReqDto
+
+메소드(CreateBoardReqDto createBoardReqDto)
+
+BoardService 인터페이스
+
+createBoard(CreateBoardReqDto createBoardReqDto) throws Exception
+
+@Autowired
+:final로 생성하는 변수를 자동으로 잡아주는것
+@Qualifier
+:임명해주는 어노테이션
+
+
+DI(Dependency Injection)
+DI(Dependency Injection)란 스프링이 다른 프레임워크와 
+차별화되어 제공하는 의존 관계 주입 기능
+
+DI(의존성 주입)를 통해서 모듈 간의 결합도가 낮아지고 유연성이 높아진다.
+
+
+spring 에서 객체는 bean을 뜻하며 싱글톤(유일한객체로 공유) 패턴의 특성을 가짐
+
+@component: service,controller,repository
+
+
+Bean(IOC) 컨테이너: bean 객체의 생성과 소멸 작업을 자동적으로 수행해주는 곳
+
+Ioc(Inversion of Control)
+
+IoC(Inversion of Control)란 "제어의 역전" 이라는 의미로, 말 그대로 메소드나 
+객체의 호출작업을 개발자가 결정하는 것이 아니라, 외부에서 결정되는 것을 의미
+
+
+IoC는 제어의 역전이라고 말하며, 간단히 말해 "제어의 흐름을 바꾼다
+
+객체의 의존성을 역전시켜 객체 간의 결합도를 줄이고 유연한 코드를
+ 작성할 수 있게 하여 가독성 및 코드 중복, 유지 보수
+
+데이터베이스(DataBase)란?
+
+데이터베이스(DB: database)는 통합하여 관리되는 데이터의 집합체를 의미
+
+중복된 데이터를 없애고, 자료를 구조화하여, 효율적인 처리를 할 수 있도록 관리
+
+데이터베이스를 관리하는 이러한 미들웨어를
+ 데이터베이스 관리 시스템(DBMS: Database Management System)
+
+SQL(Structured Query Language)
+
+데이터베이스에서 데이터를 정의, 조작, 제어하기 위해 사용하는 언어
