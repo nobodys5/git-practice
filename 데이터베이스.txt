@@ -1,0 +1,23 @@
+Dto
+: 객체를 받고 객체를 전달해주는 프로세스
+
+db
+: 데이터베이스
+
+dbms -> 마리아DB(관계형데이터베이스)
+
+dbms 만들고 CRUD
+
+지역시간 설정
+time_zone = Asia_Seoul
+
+
+문자인코딩(utf8mb4)
+character_set_(client, connection, database, filesystem, results, server)
+collaction_(connection, server)
+
+연결가능횟수
+max_connections = 1500
+
+트리거권한
+log_bin_trust_function_creators = 1
