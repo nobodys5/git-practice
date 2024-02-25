@@ -28,7 +28,6 @@ public class Event extends Homeplus {
 			System.out.println("1.할인적용품목입니다.");
 			System.out.println("2.할인상품이아닙니다.");
 			select = scanner.nextLine();
-			String sale = null;
 			String nosale = null;
 			
 			if(select.equals("1")) {
